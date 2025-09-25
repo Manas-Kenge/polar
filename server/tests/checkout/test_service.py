@@ -1420,7 +1420,7 @@ class TestCreate:
         assert checkout.trial_interval_count is None
         assert checkout.trial_end is not None
         assert checkout.is_payment_required is False
-        assert checkout.is_payment_setup_required is True
+        assert checkout.is_payment_setup_required is False
 
     @pytest.mark.auth(
         AuthSubjectFixture(subject="user"),
@@ -1449,7 +1449,7 @@ class TestCreate:
         assert checkout.trial_interval_count == 7
         assert checkout.trial_end is not None
         assert checkout.is_payment_required is False
-        assert checkout.is_payment_setup_required is True
+        assert checkout.is_payment_setup_required is False
 
     @pytest.mark.auth(
         AuthSubjectFixture(subject="user"),

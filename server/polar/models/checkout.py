@@ -278,6 +278,8 @@ class Checkout(
 
     @property
     def is_payment_setup_required(self) -> bool:
+        if self.trial_end is not None:
+            return False
         return self.product.is_recurring and not self.is_free_product_price
 
     @property
