@@ -1,14 +1,14 @@
 import Link from 'next/link'
 import { PropsWithChildren } from 'react'
 import { twMerge } from 'tailwind-merge'
-import { BrandingMenu } from '../Layout/Public/BrandingMenu'
+import { PolarLogotype } from '../Layout/Public/PolarLogotype'
 
 const Footer = () => {
   return (
     <div className="mt-16 flex w-full flex-col items-center gap-y-12 bg-white dark:bg-black">
       <div
         className={twMerge(
-          'flex w-full flex-col items-center px-6 py-16 md:max-w-3xl md:px-0 xl:max-w-7xl',
+          'flex w-full flex-col items-center px-6 py-16 md:max-w-3xl md:px-0 xl:max-w-6xl',
         )}
       >
         <div
@@ -18,7 +18,7 @@ const Footer = () => {
         >
           <div className="flex flex-1 flex-col gap-y-6 md:col-span-2">
             <span className="text-black md:ml-0 dark:text-white">
-              <BrandingMenu
+              <PolarLogotype
                 className="ml-2 md:ml-0"
                 logoVariant="logotype"
                 size={120}

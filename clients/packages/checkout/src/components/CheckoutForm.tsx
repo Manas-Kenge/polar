@@ -158,12 +158,6 @@ const BaseCheckoutForm = ({
           }
           clearErrors('customerBillingAddress')
         }
-      } else if (name === 'isBusinessCustomer') {
-        const { isBusinessCustomer } = value
-        payload = {
-          ...payload,
-          isBusinessCustomer,
-        }
       }
 
       if (Object.keys(payload).length === 0) {
@@ -195,6 +189,15 @@ const BaseCheckoutForm = ({
       resetField('discountCode')
     } catch {}
   }, [update, clearErrors, resetField])
+
+  const updateBusinessCustomer = useCallback(
+    async (isBusinessCustomer: boolean) => {
+      try {
+        await update({ isBusinessCustomer })
+      } catch {}
+    },
+    [update],
+  )
 
   useEffect(() => {
     const subscription = watch(debouncedWatcher)
@@ -382,7 +385,14 @@ const BaseCheckoutForm = ({
                           <FormControl>
                             <Checkbox
                               checked={field.value ? field.value : false}
-                              onCheckedChange={field.onChange}
+                              onCheckedChange={(checked) => {
+                                if (isUpdatePending) {
+                                  return
+                                }
+
+                                field.onChange(checked)
+                                updateBusinessCustomer(!!checked)
+                              }}
                             />
                           </FormControl>
                           <FormLabel>
@@ -676,8 +686,8 @@ const BaseCheckoutForm = ({
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="flex flex-row items-center justify-between">
-                        <div>Discount Code</div>
-                        <div className="dark:text-polar-500 text-xs text-gray-500">
+                        <div>Discount code</div>
+                        <div className="dark:text-polar-500 text-xs font-normal text-gray-500">
                           Optional
                         </div>
                       </FormLabel>
@@ -953,6 +963,7 @@ const StripeCheckoutForm = (props: CheckoutFormProps) => {
       stripe={stripePromise}
       options={{
         ...elementsOptions,
+        locale: 'en',
         customerSessionClientSecret: (
           checkout.paymentProcessorMetadata as {
             customer_session_client_secret?: string

@@ -272,6 +272,7 @@ export const ORDER_PREVIEW: schemas['CustomerOrder'] = {
   billing_address: null,
   is_invoice_generated: false,
   status: 'paid',
+  invoice_number: 'INV-0001',
   paid: true,
   subtotal_amount: 10000,
   discount_amount: 0,
@@ -338,4 +339,5 @@ export const SUBSCRIPTION_ORDER_PREVIEW: schemas['CustomerSubscription'] = {
   customer_cancellation_comment: null,
   customer_cancellation_reason: null,
   meters: [],
+  is_polar_managed: true,
 }

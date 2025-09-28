@@ -2452,6 +2452,28 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/v1/customer-portal/customers/me/payment-methods/confirm": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Confirm Customer Payment Method
+         * @description Confirm a payment method for the authenticated customer.
+         *
+         *     **Scopes**: `customer_portal:read` `customer_portal:write`
+         */
+        post: operations["customer_portal:customers:confirm_payment_method"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/v1/customer-portal/customers/me/payment-methods/{id}": {
         parameters: {
             query?: never;
@@ -4143,7 +4165,7 @@ export interface components {
              * CountryAlpha2
              * @enum {string}
              */
-            country: "BG" | "NL" | "TD" | "RO" | "SH" | "BJ" | "FK" | "BN" | "HR" | "PL" | "LR" | "NI" | "DE" | "IO" | "MN" | "SB" | "BQ" | "AF" | "KY" | "DZ" | "SJ" | "WS" | "PG" | "AI" | "BD" | "KP" | "CG" | "FR" | "BA" | "SN" | "BH" | "BS" | "KE" | "UG" | "BZ" | "PH" | "TL" | "KI" | "CD" | "PM" | "OM" | "CO" | "MA" | "AU" | "MG" | "QA" | "LU" | "NC" | "UZ" | "JO" | "AR" | "ZW" | "PE" | "VA" | "GN" | "GT" | "CR" | "MK" | "SV" | "FO" | "SM" | "GQ" | "IM" | "AT" | "CV" | "MV" | "BF" | "CN" | "IL" | "AL" | "ER" | "ES" | "DM" | "EC" | "GD" | "AE" | "LC" | "MW" | "MZ" | "AS" | "CZ" | "GH" | "DO" | "PF" | "BL" | "UM" | "GL" | "RU" | "SY" | "TK" | "CY" | "HT" | "MT" | "MS" | "VN" | "GA" | "BM" | "NG" | "MX" | "CF" | "BB" | "CX" | "LI" | "SA" | "TV" | "JP" | "BE" | "MP" | "IR" | "CA" | "ME" | "SS" | "MR" | "SI" | "ZM" | "TJ" | "AO" | "HN" | "GW" | "NA" | "IE" | "GI" | "TN" | "VI" | "LB" | "TC" | "TW" | "NP" | "CL" | "MH" | "MO" | "BY" | "NF" | "EH" | "UY" | "BO" | "CM" | "MY" | "AZ" | "GP" | "TM" | "PA" | "YE" | "NU" | "BW" | "NZ" | "IN" | "CC" | "PN" | "ZA" | "GY" | "TH" | "MF" | "FI" | "GE" | "AQ" | "YT" | "IS" | "BR" | "VG" | "JM" | "KZ" | "BI" | "LY" | "TG" | "DK" | "SL" | "TR" | "HU" | "MQ" | "AM" | "MC" | "PK" | "GF" | "GM" | "US" | "DJ" | "VU" | "PY" | "SO" | "LT" | "IT" | "LK" | "TZ" | "HK" | "JE" | "KN" | "ST" | "UA" | "EG" | "IQ" | "SG" | "RS" | "KR" | "AX" | "HM" | "SZ" | "CH" | "CW" | "NR" | "EE" | "MU" | "KM" | "SX" | "SE" | "TF" | "RE" | "PT" | "GS" | "GU" | "WF" | "RW" | "KW" | "PW" | "PS" | "KH" | "BT" | "FJ" | "KG" | "GR" | "BV" | "LA" | "FM" | "ET" | "ID" | "ML" | "TT" | "CK" | "AD" | "CU" | "LS" | "AG" | "SD" | "GB" | "MD" | "GG" | "LV" | "AW" | "TO" | "PR" | "SK" | "CI" | "MM" | "VC" | "VE" | "NE" | "NO" | "SR" | "SC";
+            country: "AD" | "AE" | "AF" | "AG" | "AI" | "AL" | "AM" | "AO" | "AQ" | "AR" | "AS" | "AT" | "AU" | "AW" | "AX" | "AZ" | "BA" | "BB" | "BD" | "BE" | "BF" | "BG" | "BH" | "BI" | "BJ" | "BL" | "BM" | "BN" | "BO" | "BQ" | "BR" | "BS" | "BT" | "BV" | "BW" | "BY" | "BZ" | "CA" | "CC" | "CD" | "CF" | "CG" | "CH" | "CI" | "CK" | "CL" | "CM" | "CN" | "CO" | "CR" | "CU" | "CV" | "CW" | "CX" | "CY" | "CZ" | "DE" | "DJ" | "DK" | "DM" | "DO" | "DZ" | "EC" | "EE" | "EG" | "EH" | "ER" | "ES" | "ET" | "FI" | "FJ" | "FK" | "FM" | "FO" | "FR" | "GA" | "GB" | "GD" | "GE" | "GF" | "GG" | "GH" | "GI" | "GL" | "GM" | "GN" | "GP" | "GQ" | "GR" | "GS" | "GT" | "GU" | "GW" | "GY" | "HK" | "HM" | "HN" | "HR" | "HT" | "HU" | "ID" | "IE" | "IL" | "IM" | "IN" | "IO" | "IQ" | "IR" | "IS" | "IT" | "JE" | "JM" | "JO" | "JP" | "KE" | "KG" | "KH" | "KI" | "KM" | "KN" | "KP" | "KR" | "KW" | "KY" | "KZ" | "LA" | "LB" | "LC" | "LI" | "LK" | "LR" | "LS" | "LT" | "LU" | "LV" | "LY" | "MA" | "MC" | "MD" | "ME" | "MF" | "MG" | "MH" | "MK" | "ML" | "MM" | "MN" | "MO" | "MP" | "MQ" | "MR" | "MS" | "MT" | "MU" | "MV" | "MW" | "MX" | "MY" | "MZ" | "NA" | "NC" | "NE" | "NF" | "NG" | "NI" | "NL" | "NO" | "NP" | "NR" | "NU" | "NZ" | "OM" | "PA" | "PE" | "PF" | "PG" | "PH" | "PK" | "PL" | "PM" | "PN" | "PR" | "PS" | "PT" | "PW" | "PY" | "QA" | "RE" | "RO" | "RS" | "RU" | "RW" | "SA" | "SB" | "SC" | "SD" | "SE" | "SG" | "SH" | "SI" | "SJ" | "SK" | "SL" | "SM" | "SN" | "SO" | "SR" | "SS" | "ST" | "SV" | "SX" | "SY" | "SZ" | "TC" | "TD" | "TF" | "TG" | "TH" | "TJ" | "TK" | "TL" | "TM" | "TN" | "TO" | "TR" | "TT" | "TV" | "TW" | "TZ" | "UA" | "UG" | "UM" | "US" | "UY" | "UZ" | "VA" | "VC" | "VE" | "VG" | "VI" | "VN" | "VU" | "WF" | "WS" | "YE" | "YT" | "ZA" | "ZM" | "ZW";
         };
         /** AddressInput */
         AddressInput: {
@@ -4161,8 +4183,13 @@ export interface components {
              * CountryAlpha2Input
              * @enum {string}
              */
-            country: "BG" | "NL" | "TD" | "RO" | "SH" | "BJ" | "FK" | "BN" | "HR" | "PL" | "LR" | "NI" | "DE" | "IO" | "MN" | "SB" | "BQ" | "AF" | "KY" | "DZ" | "SJ" | "WS" | "PG" | "AI" | "BD" | "CG" | "FR" | "BA" | "SN" | "BH" | "BS" | "KE" | "UG" | "BZ" | "PH" | "TL" | "KI" | "CD" | "PM" | "OM" | "CO" | "MA" | "AU" | "MG" | "QA" | "LU" | "NC" | "UZ" | "JO" | "AR" | "ZW" | "PE" | "VA" | "GN" | "GT" | "CR" | "MK" | "SV" | "FO" | "SM" | "GQ" | "IM" | "AT" | "CV" | "MV" | "BF" | "CN" | "IL" | "AL" | "ER" | "ES" | "DM" | "EC" | "GD" | "AE" | "LC" | "MW" | "MZ" | "AS" | "CZ" | "GH" | "DO" | "PF" | "BL" | "UM" | "GL" | "TK" | "CY" | "HT" | "MT" | "MS" | "VN" | "GA" | "BM" | "NG" | "MX" | "CF" | "BB" | "CX" | "LI" | "SA" | "TV" | "JP" | "BE" | "MP" | "CA" | "ME" | "SS" | "MR" | "SI" | "ZM" | "TJ" | "AO" | "HN" | "GW" | "NA" | "IE" | "GI" | "TN" | "VI" | "LB" | "TC" | "TW" | "NP" | "CL" | "MH" | "MO" | "BY" | "NF" | "EH" | "UY" | "BO" | "CM" | "MY" | "AZ" | "GP" | "TM" | "PA" | "YE" | "NU" | "BW" | "NZ" | "IN" | "CC" | "PN" | "ZA" | "GY" | "TH" | "MF" | "FI" | "GE" | "AQ" | "YT" | "IS" | "BR" | "VG" | "JM" | "KZ" | "BI" | "LY" | "TG" | "DK" | "SL" | "TR" | "HU" | "MQ" | "AM" | "MC" | "PK" | "GF" | "GM" | "US" | "DJ" | "VU" | "PY" | "SO" | "LT" | "IT" | "LK" | "TZ" | "HK" | "JE" | "KN" | "ST" | "UA" | "EG" | "IQ" | "SG" | "RS" | "KR" | "AX" | "HM" | "SZ" | "CH" | "CW" | "NR" | "EE" | "MU" | "KM" | "SX" | "SE" | "TF" | "RE" | "PT" | "GS" | "GU" | "WF" | "RW" | "KW" | "PW" | "PS" | "KH" | "BT" | "FJ" | "KG" | "GR" | "BV" | "LA" | "FM" | "ET" | "ID" | "ML" | "TT" | "CK" | "AD" | "LS" | "AG" | "SD" | "GB" | "MD" | "GG" | "LV" | "AW" | "TO" | "PR" | "SK" | "CI" | "MM" | "VC" | "VE" | "NE" | "NO" | "SR" | "SC";
+            country: "AD" | "AE" | "AF" | "AG" | "AI" | "AL" | "AM" | "AO" | "AQ" | "AR" | "AS" | "AT" | "AU" | "AW" | "AX" | "AZ" | "BA" | "BB" | "BD" | "BE" | "BF" | "BG" | "BH" | "BI" | "BJ" | "BL" | "BM" | "BN" | "BO" | "BQ" | "BR" | "BS" | "BT" | "BV" | "BW" | "BY" | "BZ" | "CA" | "CC" | "CD" | "CF" | "CG" | "CH" | "CI" | "CK" | "CL" | "CM" | "CN" | "CO" | "CR" | "CV" | "CW" | "CX" | "CY" | "CZ" | "DE" | "DJ" | "DK" | "DM" | "DO" | "DZ" | "EC" | "EE" | "EG" | "EH" | "ER" | "ES" | "ET" | "FI" | "FJ" | "FK" | "FM" | "FO" | "FR" | "GA" | "GB" | "GD" | "GE" | "GF" | "GG" | "GH" | "GI" | "GL" | "GM" | "GN" | "GP" | "GQ" | "GR" | "GS" | "GT" | "GU" | "GW" | "GY" | "HK" | "HM" | "HN" | "HR" | "HT" | "HU" | "ID" | "IE" | "IL" | "IM" | "IN" | "IO" | "IQ" | "IS" | "IT" | "JE" | "JM" | "JO" | "JP" | "KE" | "KG" | "KH" | "KI" | "KM" | "KN" | "KR" | "KW" | "KY" | "KZ" | "LA" | "LB" | "LC" | "LI" | "LK" | "LR" | "LS" | "LT" | "LU" | "LV" | "LY" | "MA" | "MC" | "MD" | "ME" | "MF" | "MG" | "MH" | "MK" | "ML" | "MM" | "MN" | "MO" | "MP" | "MQ" | "MR" | "MS" | "MT" | "MU" | "MV" | "MW" | "MX" | "MY" | "MZ" | "NA" | "NC" | "NE" | "NF" | "NG" | "NI" | "NL" | "NO" | "NP" | "NR" | "NU" | "NZ" | "OM" | "PA" | "PE" | "PF" | "PG" | "PH" | "PK" | "PL" | "PM" | "PN" | "PR" | "PS" | "PT" | "PW" | "PY" | "QA" | "RE" | "RO" | "RS" | "RW" | "SA" | "SB" | "SC" | "SD" | "SE" | "SG" | "SH" | "SI" | "SJ" | "SK" | "SL" | "SM" | "SN" | "SO" | "SR" | "SS" | "ST" | "SV" | "SX" | "SZ" | "TC" | "TD" | "TF" | "TG" | "TH" | "TJ" | "TK" | "TL" | "TM" | "TN" | "TO" | "TR" | "TT" | "TV" | "TW" | "TZ" | "UA" | "UG" | "UM" | "US" | "UY" | "UZ" | "VA" | "VC" | "VE" | "VG" | "VI" | "VN" | "VU" | "WF" | "WS" | "YE" | "YT" | "ZA" | "ZM" | "ZW";
         };
+        /**
+         * AggregationFunction
+         * @enum {string}
+         */
+        AggregationFunction: "count" | "sum" | "max" | "min" | "avg" | "unique";
         /** AlreadyActiveSubscriptionError */
         AlreadyActiveSubscriptionError: {
             /**
@@ -8392,7 +8419,7 @@ export interface components {
          * CountryAlpha2
          * @enum {string}
          */
-        CountryAlpha2: "BG" | "NL" | "TD" | "RO" | "SH" | "BJ" | "FK" | "BN" | "HR" | "PL" | "LR" | "NI" | "DE" | "IO" | "MN" | "SB" | "BQ" | "AF" | "KY" | "DZ" | "SJ" | "WS" | "PG" | "AI" | "BD" | "KP" | "CG" | "FR" | "BA" | "SN" | "BH" | "BS" | "KE" | "UG" | "BZ" | "PH" | "TL" | "KI" | "CD" | "PM" | "OM" | "CO" | "MA" | "AU" | "MG" | "QA" | "LU" | "NC" | "UZ" | "JO" | "AR" | "ZW" | "PE" | "VA" | "GN" | "GT" | "CR" | "MK" | "SV" | "FO" | "SM" | "GQ" | "IM" | "AT" | "CV" | "MV" | "BF" | "CN" | "IL" | "AL" | "ER" | "ES" | "DM" | "EC" | "GD" | "AE" | "LC" | "MW" | "MZ" | "AS" | "CZ" | "GH" | "DO" | "PF" | "BL" | "UM" | "GL" | "RU" | "SY" | "TK" | "CY" | "HT" | "MT" | "MS" | "VN" | "GA" | "BM" | "NG" | "MX" | "CF" | "BB" | "CX" | "LI" | "SA" | "TV" | "JP" | "BE" | "MP" | "IR" | "CA" | "ME" | "SS" | "MR" | "SI" | "ZM" | "TJ" | "AO" | "HN" | "GW" | "NA" | "IE" | "GI" | "TN" | "VI" | "LB" | "TC" | "TW" | "NP" | "CL" | "MH" | "MO" | "BY" | "NF" | "EH" | "UY" | "BO" | "CM" | "MY" | "AZ" | "GP" | "TM" | "PA" | "YE" | "NU" | "BW" | "NZ" | "IN" | "CC" | "PN" | "ZA" | "GY" | "TH" | "MF" | "FI" | "GE" | "AQ" | "YT" | "IS" | "BR" | "VG" | "JM" | "KZ" | "BI" | "LY" | "TG" | "DK" | "SL" | "TR" | "HU" | "MQ" | "AM" | "MC" | "PK" | "GF" | "GM" | "US" | "DJ" | "VU" | "PY" | "SO" | "LT" | "IT" | "LK" | "TZ" | "HK" | "JE" | "KN" | "ST" | "UA" | "EG" | "IQ" | "SG" | "RS" | "KR" | "AX" | "HM" | "SZ" | "CH" | "CW" | "NR" | "EE" | "MU" | "KM" | "SX" | "SE" | "TF" | "RE" | "PT" | "GS" | "GU" | "WF" | "RW" | "KW" | "PW" | "PS" | "KH" | "BT" | "FJ" | "KG" | "GR" | "BV" | "LA" | "FM" | "ET" | "ID" | "ML" | "TT" | "CK" | "AD" | "CU" | "LS" | "AG" | "SD" | "GB" | "MD" | "GG" | "LV" | "AW" | "TO" | "PR" | "SK" | "CI" | "MM" | "VC" | "VE" | "NE" | "NO" | "SR" | "SC";
+        CountryAlpha2: "AD" | "AE" | "AF" | "AG" | "AI" | "AL" | "AM" | "AO" | "AQ" | "AR" | "AS" | "AT" | "AU" | "AW" | "AX" | "AZ" | "BA" | "BB" | "BD" | "BE" | "BF" | "BG" | "BH" | "BI" | "BJ" | "BL" | "BM" | "BN" | "BO" | "BQ" | "BR" | "BS" | "BT" | "BV" | "BW" | "BY" | "BZ" | "CA" | "CC" | "CD" | "CF" | "CG" | "CH" | "CI" | "CK" | "CL" | "CM" | "CN" | "CO" | "CR" | "CU" | "CV" | "CW" | "CX" | "CY" | "CZ" | "DE" | "DJ" | "DK" | "DM" | "DO" | "DZ" | "EC" | "EE" | "EG" | "EH" | "ER" | "ES" | "ET" | "FI" | "FJ" | "FK" | "FM" | "FO" | "FR" | "GA" | "GB" | "GD" | "GE" | "GF" | "GG" | "GH" | "GI" | "GL" | "GM" | "GN" | "GP" | "GQ" | "GR" | "GS" | "GT" | "GU" | "GW" | "GY" | "HK" | "HM" | "HN" | "HR" | "HT" | "HU" | "ID" | "IE" | "IL" | "IM" | "IN" | "IO" | "IQ" | "IR" | "IS" | "IT" | "JE" | "JM" | "JO" | "JP" | "KE" | "KG" | "KH" | "KI" | "KM" | "KN" | "KP" | "KR" | "KW" | "KY" | "KZ" | "LA" | "LB" | "LC" | "LI" | "LK" | "LR" | "LS" | "LT" | "LU" | "LV" | "LY" | "MA" | "MC" | "MD" | "ME" | "MF" | "MG" | "MH" | "MK" | "ML" | "MM" | "MN" | "MO" | "MP" | "MQ" | "MR" | "MS" | "MT" | "MU" | "MV" | "MW" | "MX" | "MY" | "MZ" | "NA" | "NC" | "NE" | "NF" | "NG" | "NI" | "NL" | "NO" | "NP" | "NR" | "NU" | "NZ" | "OM" | "PA" | "PE" | "PF" | "PG" | "PH" | "PK" | "PL" | "PM" | "PN" | "PR" | "PS" | "PT" | "PW" | "PY" | "QA" | "RE" | "RO" | "RS" | "RU" | "RW" | "SA" | "SB" | "SC" | "SD" | "SE" | "SG" | "SH" | "SI" | "SJ" | "SK" | "SL" | "SM" | "SN" | "SO" | "SR" | "SS" | "ST" | "SV" | "SX" | "SY" | "SZ" | "TC" | "TD" | "TF" | "TG" | "TH" | "TJ" | "TK" | "TL" | "TM" | "TN" | "TO" | "TR" | "TT" | "TV" | "TW" | "TZ" | "UA" | "UG" | "UM" | "US" | "UY" | "UZ" | "VA" | "VC" | "VE" | "VG" | "VI" | "VN" | "VU" | "WF" | "WS" | "YE" | "YT" | "ZA" | "ZM" | "ZW";
         CustomField: components["schemas"]["CustomFieldText"] | components["schemas"]["CustomFieldNumber"] | components["schemas"]["CustomFieldDate"] | components["schemas"]["CustomFieldCheckbox"] | components["schemas"]["CustomFieldSelect"];
         /**
          * CustomFieldCheckbox
@@ -9712,6 +9739,16 @@ export interface components {
          * @enum {string}
          */
         CustomerMeterSortProperty: "created_at" | "-created_at" | "modified_at" | "-modified_at" | "customer_id" | "-customer_id" | "customer_name" | "-customer_name" | "meter_id" | "-meter_id" | "meter_name" | "-meter_name" | "consumed_units" | "-consumed_units" | "credited_units" | "-credited_units" | "balance" | "-balance";
+        /** CustomerNotReady */
+        CustomerNotReady: {
+            /**
+             * Error
+             * @constant
+             */
+            error: "CustomerNotReady";
+            /** Detail */
+            detail: string;
+        };
         /**
          * CustomerOAuthPlatform
          * @enum {string}
@@ -9791,6 +9828,11 @@ export interface components {
              */
             billing_name: string | null;
             billing_address: components["schemas"]["Address"] | null;
+            /**
+             * Invoice Number
+             * @description The invoice number associated with this order.
+             */
+            invoice_number: string;
             /**
              * Is Invoice Generated
              * @description Whether an invoice has been generated for this order.
@@ -10101,6 +10143,13 @@ export interface components {
             products: components["schemas"]["CustomerProduct"][];
         };
         CustomerPaymentMethod: components["schemas"]["PaymentMethodCard"] | components["schemas"]["PaymentMethodGeneric"];
+        /** CustomerPaymentMethodConfirm */
+        CustomerPaymentMethodConfirm: {
+            /** Setup Intent Id */
+            setup_intent_id: string;
+            /** Set Default */
+            set_default: boolean;
+        };
         /** CustomerPaymentMethodCreate */
         CustomerPaymentMethodCreate: {
             /** Confirmation Token Id */
@@ -10109,6 +10158,27 @@ export interface components {
             set_default: boolean;
             /** Return Url */
             return_url: string;
+        };
+        /** CustomerPaymentMethodCreateRequiresActionResponse */
+        CustomerPaymentMethodCreateRequiresActionResponse: {
+            /**
+             * @description discriminator enum property added by openapi-typescript
+             * @enum {string}
+             */
+            status: "requires_action";
+            /** Client Secret */
+            client_secret: string;
+        };
+        CustomerPaymentMethodCreateResponse: components["schemas"]["CustomerPaymentMethodCreateSucceededResponse"] | components["schemas"]["CustomerPaymentMethodCreateRequiresActionResponse"];
+        /** CustomerPaymentMethodCreateSucceededResponse */
+        CustomerPaymentMethodCreateSucceededResponse: {
+            /**
+             * @description discriminator enum property added by openapi-typescript
+             * @enum {string}
+             */
+            status: "succeeded";
+            /** CustomerPaymentMethod */
+            payment_method: components["schemas"]["CustomerPaymentMethod"];
         };
         /** CustomerPortalCustomer */
         CustomerPortalCustomer: {
@@ -10766,6 +10836,11 @@ export interface components {
              * @description List of meters associated with the subscription.
              */
             meters: components["schemas"]["CustomerSubscriptionMeter"][];
+            /**
+             * Is Polar Managed
+             * @description Whether the subscription is managed by Polar.
+             */
+            readonly is_polar_managed: boolean;
         };
         /** CustomerSubscriptionCancel */
         CustomerSubscriptionCancel: {
@@ -14337,6 +14412,11 @@ export interface components {
              */
             billing_name: string | null;
             billing_address: components["schemas"]["Address"] | null;
+            /**
+             * Invoice Number
+             * @description The invoice number associated with this order.
+             */
+            invoice_number: string;
             /**
              * Is Invoice Generated
              * @description Whether an invoice has been generated for this order.
@@ -24235,13 +24315,55 @@ export interface operations {
             };
         };
         responses: {
-            /** @description Payment method created. */
+            /** @description Payment method created or setup initiated. */
             201: {
                 headers: {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": components["schemas"]["CustomerPaymentMethod"];
+                    "application/json": components["schemas"]["CustomerPaymentMethodCreateResponse"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    "customer_portal:customers:confirm_payment_method": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["CustomerPaymentMethodConfirm"];
+            };
+        };
+        responses: {
+            /** @description Payment method created or setup initiated. */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["CustomerPaymentMethodCreateResponse"];
+                };
+            };
+            /** @description Customer is not ready to confirm a payment method. */
+            400: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["CustomerNotReady"];
                 };
             };
             /** @description Validation Error */
@@ -25874,6 +25996,8 @@ export interface operations {
                 customer_id?: string | string[] | null;
                 /** @description Filter by external customer ID. */
                 external_customer_id?: string | string[] | null;
+                /** @description If set, will first compute the quantities per customer before aggregating them using the given function. If not set, the quantities will be aggregated across all events. */
+                customer_aggregation_function?: components["schemas"]["AggregationFunction"] | null;
                 /** @description Filter by metadata key-value pairs. It uses the `deepObject` style, e.g. `?metadata[key]=value`. */
                 metadata?: components["schemas"]["MetadataQuery"];
             };
@@ -27324,8 +27448,9 @@ type ReadonlyArray<T> = [
 ] ? Readonly<Exclude<T, undefined>> : Readonly<Exclude<T, undefined>[]>;
 export const pathsV1MetricsGetParametersQueryTimezoneValues: ReadonlyArray<paths["/v1/metrics/"]["get"]["parameters"]["query"]["timezone"]> = ["Africa/Abidjan", "Africa/Accra", "Africa/Addis_Ababa", "Africa/Algiers", "Africa/Asmara", "Africa/Asmera", "Africa/Bamako", "Africa/Bangui", "Africa/Banjul", "Africa/Bissau", "Africa/Blantyre", "Africa/Brazzaville", "Africa/Bujumbura", "Africa/Cairo", "Africa/Casablanca", "Africa/Ceuta", "Africa/Conakry", "Africa/Dakar", "Africa/Dar_es_Salaam", "Africa/Djibouti", "Africa/Douala", "Africa/El_Aaiun", "Africa/Freetown", "Africa/Gaborone", "Africa/Harare", "Africa/Johannesburg", "Africa/Juba", "Africa/Kampala", "Africa/Khartoum", "Africa/Kigali", "Africa/Kinshasa", "Africa/Lagos", "Africa/Libreville", "Africa/Lome", "Africa/Luanda", "Africa/Lubumbashi", "Africa/Lusaka", "Africa/Malabo", "Africa/Maputo", "Africa/Maseru", "Africa/Mbabane", "Africa/Mogadishu", "Africa/Monrovia", "Africa/Nairobi", "Africa/Ndjamena", "Africa/Niamey", "Africa/Nouakchott", "Africa/Ouagadougou", "Africa/Porto-Novo", "Africa/Sao_Tome", "Africa/Timbuktu", "Africa/Tripoli", "Africa/Tunis", "Africa/Windhoek", "America/Adak", "America/Anchorage", "America/Anguilla", "America/Antigua", "America/Araguaina", "America/Argentina/Buenos_Aires", "America/Argentina/Catamarca", "America/Argentina/ComodRivadavia", "America/Argentina/Cordoba", "America/Argentina/Jujuy", "America/Argentina/La_Rioja", "America/Argentina/Mendoza", "America/Argentina/Rio_Gallegos", "America/Argentina/Salta", "America/Argentina/San_Juan", "America/Argentina/San_Luis", "America/Argentina/Tucuman", "America/Argentina/Ushuaia", "America/Aruba", "America/Asuncion", "America/Atikokan", "America/Atka", "America/Bahia", "America/Bahia_Banderas", "America/Barbados", "America/Belem", "America/Belize", "America/Blanc-Sablon", "America/Boa_Vista", "America/Bogota", "America/Boise", "America/Buenos_Aires", "America/Cambridge_Bay", "America/Campo_Grande", "America/Cancun", "America/Caracas", "America/Catamarca", "America/Cayenne", "America/Cayman", "America/Chicago", "America/Chihuahua", "America/Ciudad_Juarez", "America/Coral_Harbour", "America/Cordoba", "America/Costa_Rica", "America/Coyhaique", "America/Creston", "America/Cuiaba", "America/Curacao", "America/Danmarkshavn", "America/Dawson", "America/Dawson_Creek", "America/Denver", "America/Detroit", "America/Dominica", "America/Edmonton", "America/Eirunepe", "America/El_Salvador", "America/Ensenada", "America/Fort_Nelson", "America/Fort_Wayne", "America/Fortaleza", "America/Glace_Bay", "America/Godthab", "America/Goose_Bay", "America/Grand_Turk", "America/Grenada", "America/Guadeloupe", "America/Guatemala", "America/Guayaquil", "America/Guyana", "America/Halifax", "America/Havana", "America/Hermosillo", "America/Indiana/Indianapolis", "America/Indiana/Knox", "America/Indiana/Marengo", "America/Indiana/Petersburg", "America/Indiana/Tell_City", "America/Indiana/Vevay", "America/Indiana/Vincennes", "America/Indiana/Winamac", "America/Indianapolis", "America/Inuvik", "America/Iqaluit", "America/Jamaica", "America/Jujuy", "America/Juneau", "America/Kentucky/Louisville", "America/Kentucky/Monticello", "America/Knox_IN", "America/Kralendijk", "America/La_Paz", "America/Lima", "America/Los_Angeles", "America/Louisville", "America/Lower_Princes", "America/Maceio", "America/Managua", "America/Manaus", "America/Marigot", "America/Martinique", "America/Matamoros", "America/Mazatlan", "America/Mendoza", "America/Menominee", "America/Merida", "America/Metlakatla", "America/Mexico_City", "America/Miquelon", "America/Moncton", "America/Monterrey", "America/Montevideo", "America/Montreal", "America/Montserrat", "America/Nassau", "America/New_York", "America/Nipigon", "America/Nome", "America/Noronha", "America/North_Dakota/Beulah", "America/North_Dakota/Center", "America/North_Dakota/New_Salem", "America/Nuuk", "America/Ojinaga", "America/Panama", "America/Pangnirtung", "America/Paramaribo", "America/Phoenix", "America/Port-au-Prince", "America/Port_of_Spain", "America/Porto_Acre", "America/Porto_Velho", "America/Puerto_Rico", "America/Punta_Arenas", "America/Rainy_River", "America/Rankin_Inlet", "America/Recife", "America/Regina", "America/Resolute", "America/Rio_Branco", "America/Rosario", "America/Santa_Isabel", "America/Santarem", "America/Santiago", "America/Santo_Domingo", "America/Sao_Paulo", "America/Scoresbysund", "America/Shiprock", "America/Sitka", "America/St_Barthelemy", "America/St_Johns", "America/St_Kitts", "America/St_Lucia", "America/St_Thomas", "America/St_Vincent", "America/Swift_Current", "America/Tegucigalpa", "America/Thule", "America/Thunder_Bay", "America/Tijuana", "America/Toronto", "America/Tortola", "America/Vancouver", "America/Virgin", "America/Whitehorse", "America/Winnipeg", "America/Yakutat", "America/Yellowknife", "Antarctica/Casey", "Antarctica/Davis", "Antarctica/DumontDUrville", "Antarctica/Macquarie", "Antarctica/Mawson", "Antarctica/McMurdo", "Antarctica/Palmer", "Antarctica/Rothera", "Antarctica/South_Pole", "Antarctica/Syowa", "Antarctica/Troll", "Antarctica/Vostok", "Arctic/Longyearbyen", "Asia/Aden", "Asia/Almaty", "Asia/Amman", "Asia/Anadyr", "Asia/Aqtau", "Asia/Aqtobe", "Asia/Ashgabat", "Asia/Ashkhabad", "Asia/Atyrau", "Asia/Baghdad", "Asia/Bahrain", "Asia/Baku", "Asia/Bangkok", "Asia/Barnaul", "Asia/Beirut", "Asia/Bishkek", "Asia/Brunei", "Asia/Calcutta", "Asia/Chita", "Asia/Choibalsan", "Asia/Chongqing", "Asia/Chungking", "Asia/Colombo", "Asia/Dacca", "Asia/Damascus", "Asia/Dhaka", "Asia/Dili", "Asia/Dubai", "Asia/Dushanbe", "Asia/Famagusta", "Asia/Gaza", "Asia/Harbin", "Asia/Hebron", "Asia/Ho_Chi_Minh", "Asia/Hong_Kong", "Asia/Hovd", "Asia/Irkutsk", "Asia/Istanbul", "Asia/Jakarta", "Asia/Jayapura", "Asia/Jerusalem", "Asia/Kabul", "Asia/Kamchatka", "Asia/Karachi", "Asia/Kashgar", "Asia/Kathmandu", "Asia/Katmandu", "Asia/Khandyga", "Asia/Kolkata", "Asia/Krasnoyarsk", "Asia/Kuala_Lumpur", "Asia/Kuching", "Asia/Kuwait", "Asia/Macao", "Asia/Macau", "Asia/Magadan", "Asia/Makassar", "Asia/Manila", "Asia/Muscat", "Asia/Nicosia", "Asia/Novokuznetsk", "Asia/Novosibirsk", "Asia/Omsk", "Asia/Oral", "Asia/Phnom_Penh", "Asia/Pontianak", "Asia/Pyongyang", "Asia/Qatar", "Asia/Qostanay", "Asia/Qyzylorda", "Asia/Rangoon", "Asia/Riyadh", "Asia/Saigon", "Asia/Sakhalin", "Asia/Samarkand", "Asia/Seoul", "Asia/Shanghai", "Asia/Singapore", "Asia/Srednekolymsk", "Asia/Taipei", "Asia/Tashkent", "Asia/Tbilisi", "Asia/Tehran", "Asia/Tel_Aviv", "Asia/Thimbu", "Asia/Thimphu", "Asia/Tokyo", "Asia/Tomsk", "Asia/Ujung_Pandang", "Asia/Ulaanbaatar", "Asia/Ulan_Bator", "Asia/Urumqi", "Asia/Ust-Nera", "Asia/Vientiane", "Asia/Vladivostok", "Asia/Yakutsk", "Asia/Yangon", "Asia/Yekaterinburg", "Asia/Yerevan", "Atlantic/Azores", "Atlantic/Bermuda", "Atlantic/Canary", "Atlantic/Cape_Verde", "Atlantic/Faeroe", "Atlantic/Faroe", "Atlantic/Jan_Mayen", "Atlantic/Madeira", "Atlantic/Reykjavik", "Atlantic/South_Georgia", "Atlantic/St_Helena", "Atlantic/Stanley", "Australia/ACT", "Australia/Adelaide", "Australia/Brisbane", "Australia/Broken_Hill", "Australia/Canberra", "Australia/Currie", "Australia/Darwin", "Australia/Eucla", "Australia/Hobart", "Australia/LHI", "Australia/Lindeman", "Australia/Lord_Howe", "Australia/Melbourne", "Australia/NSW", "Australia/North", "Australia/Perth", "Australia/Queensland", "Australia/South", "Australia/Sydney", "Australia/Tasmania", "Australia/Victoria", "Australia/West", "Australia/Yancowinna", "Brazil/Acre", "Brazil/DeNoronha", "Brazil/East", "Brazil/West", "CET", "CST6CDT", "Canada/Atlantic", "Canada/Central", "Canada/Eastern", "Canada/Mountain", "Canada/Newfoundland", "Canada/Pacific", "Canada/Saskatchewan", "Canada/Yukon", "Chile/Continental", "Chile/EasterIsland", "Cuba", "EET", "EST", "EST5EDT", "Egypt", "Eire", "Etc/GMT", "Etc/GMT+0", "Etc/GMT+1", "Etc/GMT+10", "Etc/GMT+11", "Etc/GMT+12", "Etc/GMT+2", "Etc/GMT+3", "Etc/GMT+4", "Etc/GMT+5", "Etc/GMT+6", "Etc/GMT+7", "Etc/GMT+8", "Etc/GMT+9", "Etc/GMT-0", "Etc/GMT-1", "Etc/GMT-10", "Etc/GMT-11", "Etc/GMT-12", "Etc/GMT-13", "Etc/GMT-14", "Etc/GMT-2", "Etc/GMT-3", "Etc/GMT-4", "Etc/GMT-5", "Etc/GMT-6", "Etc/GMT-7", "Etc/GMT-8", "Etc/GMT-9", "Etc/GMT0", "Etc/Greenwich", "Etc/UCT", "Etc/UTC", "Etc/Universal", "Etc/Zulu", "Europe/Amsterdam", "Europe/Andorra", "Europe/Astrakhan", "Europe/Athens", "Europe/Belfast", "Europe/Belgrade", "Europe/Berlin", "Europe/Bratislava", "Europe/Brussels", "Europe/Bucharest", "Europe/Budapest", "Europe/Busingen", "Europe/Chisinau", "Europe/Copenhagen", "Europe/Dublin", "Europe/Gibraltar", "Europe/Guernsey", "Europe/Helsinki", "Europe/Isle_of_Man", "Europe/Istanbul", "Europe/Jersey", "Europe/Kaliningrad", "Europe/Kiev", "Europe/Kirov", "Europe/Kyiv", "Europe/Lisbon", "Europe/Ljubljana", "Europe/London", "Europe/Luxembourg", "Europe/Madrid", "Europe/Malta", "Europe/Mariehamn", "Europe/Minsk", "Europe/Monaco", "Europe/Moscow", "Europe/Nicosia", "Europe/Oslo", "Europe/Paris", "Europe/Podgorica", "Europe/Prague", "Europe/Riga", "Europe/Rome", "Europe/Samara", "Europe/San_Marino", "Europe/Sarajevo", "Europe/Saratov", "Europe/Simferopol", "Europe/Skopje", "Europe/Sofia", "Europe/Stockholm", "Europe/Tallinn", "Europe/Tirane", "Europe/Tiraspol", "Europe/Ulyanovsk", "Europe/Uzhgorod", "Europe/Vaduz", "Europe/Vatican", "Europe/Vienna", "Europe/Vilnius", "Europe/Volgograd", "Europe/Warsaw", "Europe/Zagreb", "Europe/Zaporozhye", "Europe/Zurich", "Factory", "GB", "GB-Eire", "GMT", "GMT+0", "GMT-0", "GMT0", "Greenwich", "HST", "Hongkong", "Iceland", "Indian/Antananarivo", "Indian/Chagos", "Indian/Christmas", "Indian/Cocos", "Indian/Comoro", "Indian/Kerguelen", "Indian/Mahe", "Indian/Maldives", "Indian/Mauritius", "Indian/Mayotte", "Indian/Reunion", "Iran", "Israel", "Jamaica", "Japan", "Kwajalein", "Libya", "MET", "MST", "MST7MDT", "Mexico/BajaNorte", "Mexico/BajaSur", "Mexico/General", "NZ", "NZ-CHAT", "Navajo", "PRC", "PST8PDT", "Pacific/Apia", "Pacific/Auckland", "Pacific/Bougainville", "Pacific/Chatham", "Pacific/Chuuk", "Pacific/Easter", "Pacific/Efate", "Pacific/Enderbury", "Pacific/Fakaofo", "Pacific/Fiji", "Pacific/Funafuti", "Pacific/Galapagos", "Pacific/Gambier", "Pacific/Guadalcanal", "Pacific/Guam", "Pacific/Honolulu", "Pacific/Johnston", "Pacific/Kanton", "Pacific/Kiritimati", "Pacific/Kosrae", "Pacific/Kwajalein", "Pacific/Majuro", "Pacific/Marquesas", "Pacific/Midway", "Pacific/Nauru", "Pacific/Niue", "Pacific/Norfolk", "Pacific/Noumea", "Pacific/Pago_Pago", "Pacific/Palau", "Pacific/Pitcairn", "Pacific/Pohnpei", "Pacific/Ponape", "Pacific/Port_Moresby", "Pacific/Rarotonga", "Pacific/Saipan", "Pacific/Samoa", "Pacific/Tahiti", "Pacific/Tarawa", "Pacific/Tongatapu", "Pacific/Truk", "Pacific/Wake", "Pacific/Wallis", "Pacific/Yap", "Poland", "Portugal", "ROC", "ROK", "Singapore", "Turkey", "UCT", "US/Alaska", "US/Aleutian", "US/Arizona", "US/Central", "US/East-Indiana", "US/Eastern", "US/Hawaii", "US/Indiana-Starke", "US/Michigan", "US/Mountain", "US/Pacific", "US/Samoa", "UTC", "Universal", "W-SU", "WET", "Zulu"];
 export const accountTypeValues: ReadonlyArray<components["schemas"]["AccountType"]> = ["stripe", "manual", "open_collective"];
-export const addressCountryValues: ReadonlyArray<components["schemas"]["Address"]["country"]> = ["BG", "NL", "TD", "RO", "SH", "BJ", "FK", "BN", "HR", "PL", "LR", "NI", "DE", "IO", "MN", "SB", "BQ", "AF", "KY", "DZ", "SJ", "WS", "PG", "AI", "BD", "KP", "CG", "FR", "BA", "SN", "BH", "BS", "KE", "UG", "BZ", "PH", "TL", "KI", "CD", "PM", "OM", "CO", "MA", "AU", "MG", "QA", "LU", "NC", "UZ", "JO", "AR", "ZW", "PE", "VA", "GN", "GT", "CR", "MK", "SV", "FO", "SM", "GQ", "IM", "AT", "CV", "MV", "BF", "CN", "IL", "AL", "ER", "ES", "DM", "EC", "GD", "AE", "LC", "MW", "MZ", "AS", "CZ", "GH", "DO", "PF", "BL", "UM", "GL", "RU", "SY", "TK", "CY", "HT", "MT", "MS", "VN", "GA", "BM", "NG", "MX", "CF", "BB", "CX", "LI", "SA", "TV", "JP", "BE", "MP", "IR", "CA", "ME", "SS", "MR", "SI", "ZM", "TJ", "AO", "HN", "GW", "NA", "IE", "GI", "TN", "VI", "LB", "TC", "TW", "NP", "CL", "MH", "MO", "BY", "NF", "EH", "UY", "BO", "CM", "MY", "AZ", "GP", "TM", "PA", "YE", "NU", "BW", "NZ", "IN", "CC", "PN", "ZA", "GY", "TH", "MF", "FI", "GE", "AQ", "YT", "IS", "BR", "VG", "JM", "KZ", "BI", "LY", "TG", "DK", "SL", "TR", "HU", "MQ", "AM", "MC", "PK", "GF", "GM", "US", "DJ", "VU", "PY", "SO", "LT", "IT", "LK", "TZ", "HK", "JE", "KN", "ST", "UA", "EG", "IQ", "SG", "RS", "KR", "AX", "HM", "SZ", "CH", "CW", "NR", "EE", "MU", "KM", "SX", "SE", "TF", "RE", "PT", "GS", "GU", "WF", "RW", "KW", "PW", "PS", "KH", "BT", "FJ", "KG", "GR", "BV", "LA", "FM", "ET", "ID", "ML", "TT", "CK", "AD", "CU", "LS", "AG", "SD", "GB", "MD", "GG", "LV", "AW", "TO", "PR", "SK", "CI", "MM", "VC", "VE", "NE", "NO", "SR", "SC"];
-export const addressInputCountryValues: ReadonlyArray<components["schemas"]["AddressInput"]["country"]> = ["BG", "NL", "TD", "RO", "SH", "BJ", "FK", "BN", "HR", "PL", "LR", "NI", "DE", "IO", "MN", "SB", "BQ", "AF", "KY", "DZ", "SJ", "WS", "PG", "AI", "BD", "CG", "FR", "BA", "SN", "BH", "BS", "KE", "UG", "BZ", "PH", "TL", "KI", "CD", "PM", "OM", "CO", "MA", "AU", "MG", "QA", "LU", "NC", "UZ", "JO", "AR", "ZW", "PE", "VA", "GN", "GT", "CR", "MK", "SV", "FO", "SM", "GQ", "IM", "AT", "CV", "MV", "BF", "CN", "IL", "AL", "ER", "ES", "DM", "EC", "GD", "AE", "LC", "MW", "MZ", "AS", "CZ", "GH", "DO", "PF", "BL", "UM", "GL", "TK", "CY", "HT", "MT", "MS", "VN", "GA", "BM", "NG", "MX", "CF", "BB", "CX", "LI", "SA", "TV", "JP", "BE", "MP", "CA", "ME", "SS", "MR", "SI", "ZM", "TJ", "AO", "HN", "GW", "NA", "IE", "GI", "TN", "VI", "LB", "TC", "TW", "NP", "CL", "MH", "MO", "BY", "NF", "EH", "UY", "BO", "CM", "MY", "AZ", "GP", "TM", "PA", "YE", "NU", "BW", "NZ", "IN", "CC", "PN", "ZA", "GY", "TH", "MF", "FI", "GE", "AQ", "YT", "IS", "BR", "VG", "JM", "KZ", "BI", "LY", "TG", "DK", "SL", "TR", "HU", "MQ", "AM", "MC", "PK", "GF", "GM", "US", "DJ", "VU", "PY", "SO", "LT", "IT", "LK", "TZ", "HK", "JE", "KN", "ST", "UA", "EG", "IQ", "SG", "RS", "KR", "AX", "HM", "SZ", "CH", "CW", "NR", "EE", "MU", "KM", "SX", "SE", "TF", "RE", "PT", "GS", "GU", "WF", "RW", "KW", "PW", "PS", "KH", "BT", "FJ", "KG", "GR", "BV", "LA", "FM", "ET", "ID", "ML", "TT", "CK", "AD", "LS", "AG", "SD", "GB", "MD", "GG", "LV", "AW", "TO", "PR", "SK", "CI", "MM", "VC", "VE", "NE", "NO", "SR", "SC"];
+export const addressCountryValues: ReadonlyArray<components["schemas"]["Address"]["country"]> = ["AD", "AE", "AF", "AG", "AI", "AL", "AM", "AO", "AQ", "AR", "AS", "AT", "AU", "AW", "AX", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BL", "BM", "BN", "BO", "BQ", "BR", "BS", "BT", "BV", "BW", "BY", "BZ", "CA", "CC", "CD", "CF", "CG", "CH", "CI", "CK", "CL", "CM", "CN", "CO", "CR", "CU", "CV", "CW", "CX", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "EH", "ER", "ES", "ET", "FI", "FJ", "FK", "FM", "FO", "FR", "GA", "GB", "GD", "GE", "GF", "GG", "GH", "GI", "GL", "GM", "GN", "GP", "GQ", "GR", "GS", "GT", "GU", "GW", "GY", "HK", "HM", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IM", "IN", "IO", "IQ", "IR", "IS", "IT", "JE", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KP", "KR", "KW", "KY", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "LY", "MA", "MC", "MD", "ME", "MF", "MG", "MH", "MK", "ML", "MM", "MN", "MO", "MP", "MQ", "MR", "MS", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NC", "NE", "NF", "NG", "NI", "NL", "NO", "NP", "NR", "NU", "NZ", "OM", "PA", "PE", "PF", "PG", "PH", "PK", "PL", "PM", "PN", "PR", "PS", "PT", "PW", "PY", "QA", "RE", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SD", "SE", "SG", "SH", "SI", "SJ", "SK", "SL", "SM", "SN", "SO", "SR", "SS", "ST", "SV", "SX", "SY", "SZ", "TC", "TD", "TF", "TG", "TH", "TJ", "TK", "TL", "TM", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "UM", "US", "UY", "UZ", "VA", "VC", "VE", "VG", "VI", "VN", "VU", "WF", "WS", "YE", "YT", "ZA", "ZM", "ZW"];
+export const addressInputCountryValues: ReadonlyArray<components["schemas"]["AddressInput"]["country"]> = ["AD", "AE", "AF", "AG", "AI", "AL", "AM", "AO", "AQ", "AR", "AS", "AT", "AU", "AW", "AX", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BL", "BM", "BN", "BO", "BQ", "BR", "BS", "BT", "BV", "BW", "BY", "BZ", "CA", "CC", "CD", "CF", "CG", "CH", "CI", "CK", "CL", "CM", "CN", "CO", "CR", "CV", "CW", "CX", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "EH", "ER", "ES", "ET", "FI", "FJ", "FK", "FM", "FO", "FR", "GA", "GB", "GD", "GE", "GF", "GG", "GH", "GI", "GL", "GM", "GN", "GP", "GQ", "GR", "GS", "GT", "GU", "GW", "GY", "HK", "HM", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IM", "IN", "IO", "IQ", "IS", "IT", "JE", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KY", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "LY", "MA", "MC", "MD", "ME", "MF", "MG", "MH", "MK", "ML", "MM", "MN", "MO", "MP", "MQ", "MR", "MS", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NC", "NE", "NF", "NG", "NI", "NL", "NO", "NP", "NR", "NU", "NZ", "OM", "PA", "PE", "PF", "PG", "PH", "PK", "PL", "PM", "PN", "PR", "PS", "PT", "PW", "PY", "QA", "RE", "RO", "RS", "RW", "SA", "SB", "SC", "SD", "SE", "SG", "SH", "SI", "SJ", "SK", "SL", "SM", "SN", "SO", "SR", "SS", "ST", "SV", "SX", "SZ", "TC", "TD", "TF", "TG", "TH", "TJ", "TK", "TL", "TM", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "UM", "US", "UY", "UZ", "VA", "VC", "VE", "VG", "VI", "VN", "VU", "WF", "WS", "YE", "YT", "ZA", "ZM", "ZW"];
+export const aggregationFunctionValues: ReadonlyArray<components["schemas"]["AggregationFunction"]> = ["count", "sum", "max", "min", "avg", "unique"];
 export const appealDecisionValues: ReadonlyArray<components["schemas"]["AppealDecision"]> = ["approved", "rejected"];
 export const authorizeResponseOrganizationSub_typeValues: ReadonlyArray<components["schemas"]["AuthorizeResponseOrganization"]["sub_type"]> = ["organization"];
 export const authorizeResponseUserSub_typeValues: ReadonlyArray<components["schemas"]["AuthorizeResponseUser"]["sub_type"]> = ["user"];
@@ -27353,7 +27478,7 @@ export const checkoutLinkSortPropertyValues: ReadonlyArray<components["schemas"]
 export const checkoutSortPropertyValues: ReadonlyArray<components["schemas"]["CheckoutSortProperty"]> = ["created_at", "-created_at", "expires_at", "-expires_at", "status", "-status"];
 export const checkoutStatusValues: ReadonlyArray<components["schemas"]["CheckoutStatus"]> = ["open", "expired", "confirmed", "succeeded", "failed"];
 export const countAggregationFuncValues: ReadonlyArray<components["schemas"]["CountAggregation"]["func"]> = ["count"];
-export const countryAlpha2Values: ReadonlyArray<components["schemas"]["CountryAlpha2"]> = ["BG", "NL", "TD", "RO", "SH", "BJ", "FK", "BN", "HR", "PL", "LR", "NI", "DE", "IO", "MN", "SB", "BQ", "AF", "KY", "DZ", "SJ", "WS", "PG", "AI", "BD", "KP", "CG", "FR", "BA", "SN", "BH", "BS", "KE", "UG", "BZ", "PH", "TL", "KI", "CD", "PM", "OM", "CO", "MA", "AU", "MG", "QA", "LU", "NC", "UZ", "JO", "AR", "ZW", "PE", "VA", "GN", "GT", "CR", "MK", "SV", "FO", "SM", "GQ", "IM", "AT", "CV", "MV", "BF", "CN", "IL", "AL", "ER", "ES", "DM", "EC", "GD", "AE", "LC", "MW", "MZ", "AS", "CZ", "GH", "DO", "PF", "BL", "UM", "GL", "RU", "SY", "TK", "CY", "HT", "MT", "MS", "VN", "GA", "BM", "NG", "MX", "CF", "BB", "CX", "LI", "SA", "TV", "JP", "BE", "MP", "IR", "CA", "ME", "SS", "MR", "SI", "ZM", "TJ", "AO", "HN", "GW", "NA", "IE", "GI", "TN", "VI", "LB", "TC", "TW", "NP", "CL", "MH", "MO", "BY", "NF", "EH", "UY", "BO", "CM", "MY", "AZ", "GP", "TM", "PA", "YE", "NU", "BW", "NZ", "IN", "CC", "PN", "ZA", "GY", "TH", "MF", "FI", "GE", "AQ", "YT", "IS", "BR", "VG", "JM", "KZ", "BI", "LY", "TG", "DK", "SL", "TR", "HU", "MQ", "AM", "MC", "PK", "GF", "GM", "US", "DJ", "VU", "PY", "SO", "LT", "IT", "LK", "TZ", "HK", "JE", "KN", "ST", "UA", "EG", "IQ", "SG", "RS", "KR", "AX", "HM", "SZ", "CH", "CW", "NR", "EE", "MU", "KM", "SX", "SE", "TF", "RE", "PT", "GS", "GU", "WF", "RW", "KW", "PW", "PS", "KH", "BT", "FJ", "KG", "GR", "BV", "LA", "FM", "ET", "ID", "ML", "TT", "CK", "AD", "CU", "LS", "AG", "SD", "GB", "MD", "GG", "LV", "AW", "TO", "PR", "SK", "CI", "MM", "VC", "VE", "NE", "NO", "SR", "SC"];
+export const countryAlpha2Values: ReadonlyArray<components["schemas"]["CountryAlpha2"]> = ["AD", "AE", "AF", "AG", "AI", "AL", "AM", "AO", "AQ", "AR", "AS", "AT", "AU", "AW", "AX", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BL", "BM", "BN", "BO", "BQ", "BR", "BS", "BT", "BV", "BW", "BY", "BZ", "CA", "CC", "CD", "CF", "CG", "CH", "CI", "CK", "CL", "CM", "CN", "CO", "CR", "CU", "CV", "CW", "CX", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "EH", "ER", "ES", "ET", "FI", "FJ", "FK", "FM", "FO", "FR", "GA", "GB", "GD", "GE", "GF", "GG", "GH", "GI", "GL", "GM", "GN", "GP", "GQ", "GR", "GS", "GT", "GU", "GW", "GY", "HK", "HM", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IM", "IN", "IO", "IQ", "IR", "IS", "IT", "JE", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KP", "KR", "KW", "KY", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "LY", "MA", "MC", "MD", "ME", "MF", "MG", "MH", "MK", "ML", "MM", "MN", "MO", "MP", "MQ", "MR", "MS", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NC", "NE", "NF", "NG", "NI", "NL", "NO", "NP", "NR", "NU", "NZ", "OM", "PA", "PE", "PF", "PG", "PH", "PK", "PL", "PM", "PN", "PR", "PS", "PT", "PW", "PY", "QA", "RE", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SD", "SE", "SG", "SH", "SI", "SJ", "SK", "SL", "SM", "SN", "SO", "SR", "SS", "ST", "SV", "SX", "SY", "SZ", "TC", "TD", "TF", "TG", "TH", "TJ", "TK", "TL", "TM", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "UM", "US", "UY", "UZ", "VA", "VC", "VE", "VG", "VI", "VN", "VU", "WF", "WS", "YE", "YT", "ZA", "ZM", "ZW"];
 export const customFieldCheckboxTypeValues: ReadonlyArray<components["schemas"]["CustomFieldCheckbox"]["type"]> = ["checkbox"];
 export const customFieldCreateCheckboxTypeValues: ReadonlyArray<components["schemas"]["CustomFieldCreateCheckbox"]["type"]> = ["checkbox"];
 export const customFieldCreateDateTypeValues: ReadonlyArray<components["schemas"]["CustomFieldCreateDate"]["type"]> = ["date"];
@@ -27383,6 +27508,8 @@ export const customerCustomerMeterSortPropertyValues: ReadonlyArray<components["
 export const customerMeterSortPropertyValues: ReadonlyArray<components["schemas"]["CustomerMeterSortProperty"]> = ["created_at", "-created_at", "modified_at", "-modified_at", "customer_id", "-customer_id", "customer_name", "-customer_name", "meter_id", "-meter_id", "meter_name", "-meter_name", "consumed_units", "-consumed_units", "credited_units", "-credited_units", "balance", "-balance"];
 export const customerOAuthPlatformValues: ReadonlyArray<components["schemas"]["CustomerOAuthPlatform"]> = ["github", "discord"];
 export const customerOrderSortPropertyValues: ReadonlyArray<components["schemas"]["CustomerOrderSortProperty"]> = ["created_at", "-created_at", "amount", "-amount", "net_amount", "-net_amount", "product", "-product", "subscription", "-subscription"];
+export const customerPaymentMethodCreateRequiresActionResponseStatusValues: ReadonlyArray<components["schemas"]["CustomerPaymentMethodCreateRequiresActionResponse"]["status"]> = ["requires_action"];
+export const customerPaymentMethodCreateSucceededResponseStatusValues: ReadonlyArray<components["schemas"]["CustomerPaymentMethodCreateSucceededResponse"]["status"]> = ["succeeded"];
 export const customerSortPropertyValues: ReadonlyArray<components["schemas"]["CustomerSortProperty"]> = ["created_at", "-created_at", "email", "-email", "name", "-name"];
 export const customerStateSubscriptionStatusValues: ReadonlyArray<components["schemas"]["CustomerStateSubscription"]["status"]> = ["active", "trialing"];
 export const customerSubscriptionSortPropertyValues: ReadonlyArray<components["schemas"]["CustomerSubscriptionSortProperty"]> = ["started_at", "-started_at", "amount", "-amount", "status", "-status", "organization", "-organization", "product", "-product"];
